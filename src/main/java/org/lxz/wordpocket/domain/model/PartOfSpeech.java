@@ -1,7 +1,8 @@
 package org.lxz.wordpocket.domain.model;
 
 public enum PartOfSpeech {
-    N, // 名词，表示人、事物、地点、概念等
+    CN, // 可数名词
+    UCN,// 不可数名词
     V, // 动词，表示动作、状态或事件
     ADJ, // 形容词，修饰名词，表示性质、状态、特征等
     ADV, // 副词，修饰动词、形容词或副词，表示方式、时间、程度等
