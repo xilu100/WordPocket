@@ -1,6 +1,6 @@
 services:
   database:
-    image: postgres:15
+    image: postgres:15-alpine
     environment:
       POSTGRES_USER: vocabularyUSER
       POSTGRES_PASSWORD: vocabularyPASSWORD
