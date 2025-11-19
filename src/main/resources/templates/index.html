@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WordPocket</title>
+</head>
+<body>
+<h2>Word & Meaning</h2>
+
+<table border="1">
+  <thead>
+  <tr>
+    <th>英文</th>
+    <th>中文</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="wm : ${wordAndMeanings}">
+    <td th:text="${wm.word}">word</td>
+    <td th:text="${wm.meaning}">meaning</td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>

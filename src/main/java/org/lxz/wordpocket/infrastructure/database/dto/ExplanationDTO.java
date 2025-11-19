@@ -5,7 +5,7 @@ import org.lxz.wordpocket.domain.model.PartOfSpeech;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("explanation")
+@Table("explanations")
 public record ExplanationDTO(@Id Long id, PartOfSpeech partOfSpeech, String meaning, String exampleSentence) {
 
   public static ExplanationDTO toExplanationDTO(Explanation explanation) {
