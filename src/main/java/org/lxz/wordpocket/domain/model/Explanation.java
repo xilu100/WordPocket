@@ -1,9 +1,26 @@
 package org.lxz.wordpocket.domain.model;
 
-/**
- * @param partOfSpeech    词性（n，adj，v...）
- * @param meaning         翻译
- * @param exampleSentence 例句
- */
-public record Explanation(PartOfSpeech partOfSpeech, String meaning, String exampleSentence) {
+
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.PersistenceCreator;
+
+@Getter
+@Setter
+public class Explanation {
+
+  @Id
+  private Long id;
+  private PartOfSpeech partOfSpeech;
+  private String meaning;
+  private String exampleSentence;
+
+  @PersistenceCreator
+  public Explanation(Long id, PartOfSpeech partOfSpeech, String meaning, String exampleSentence) {
+    this.id = id;
+    this.partOfSpeech = partOfSpeech;
+    this.meaning = meaning;
+    this.exampleSentence = exampleSentence;
+  }
 }

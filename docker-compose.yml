@@ -1,0 +1,11 @@
+services:
+  database:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: vocabularyUSER
+      POSTGRES_PASSWORD: vocabularyPASSWORD
+      POSTGRES_DB: vocabularyDB
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./database-data:/var/lib/postgresql/data

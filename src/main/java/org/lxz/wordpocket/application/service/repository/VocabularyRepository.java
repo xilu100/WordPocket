@@ -1,50 +1,50 @@
 package org.lxz.wordpocket.application.service.repository;
 
+import java.util.List;
+import java.util.Set;
 import org.lxz.wordpocket.domain.model.Language;
 import org.lxz.wordpocket.domain.model.PartOfSpeech;
 import org.lxz.wordpocket.domain.model.Vocabulary;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-import java.util.Set;
-
 @Repository
 public interface VocabularyRepository {
-    /*
-    Create
-     */
-    Vocabulary save(Vocabulary vocabulary);
 
-    /*
-     Read
-     */
-    List<Vocabulary> findAll();
+  /*
+  Create
+   */
+  Vocabulary save(Vocabulary vocabulary);
 
-    Vocabulary findByWord(String word);
+  /*
+   Read
+   */
+  List<Vocabulary> findAll();
 
-    List<Vocabulary> findByLanguage(Language language);
+  Vocabulary findByWord(String word);
 
-    List<Vocabulary> findByTag(String tag);
+  List<Vocabulary> findByLanguage(Language language);
 
-    List<Vocabulary> findByPartOfSpeech(PartOfSpeech partOfSpeech);
+  List<Vocabulary> findByTag(String tag);
 
-    List<Vocabulary> findByMeaning(String meaning);
+  List<Vocabulary> findByPartOfSpeech(PartOfSpeech partOfSpeech);
 
-    // Language + XXX
-    List<Vocabulary> findByLanguageAndTag(Language language, Set<String> tags);
+  List<Vocabulary> findByMeaning(String meaning);
 
-    List<Vocabulary> findByLanguageAndPartOfSpeech(Language language, PartOfSpeech partOfSpeech);
+  // Language + XXX
+  List<Vocabulary> findByLanguageAndTag(Language language, String tag);
 
-    List<Vocabulary> findByLanguageAndMeaning(Language language, String meaning);
+  List<Vocabulary> findByLanguageAndPartOfSpeech(Language language, PartOfSpeech partOfSpeech);
+
+  List<Vocabulary> findByLanguageAndMeaning(Language language, String meaning);
 
     /*
      Update&Modify
      */
 
-    Vocabulary modifyByWord(Vocabulary vocabulary);
+  Vocabulary modifyByWord(Vocabulary vocabulary);
 
-    /*
-     Delete&Remove
-     */
-    void delete(String word);
+  /*
+   Delete&Remove
+   */
+  void delete(String word);
 }
